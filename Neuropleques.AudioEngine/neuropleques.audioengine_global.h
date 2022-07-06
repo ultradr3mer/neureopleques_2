@@ -1,0 +1,13 @@
+#pragma once
+
+#include <QtCore/qglobal.h>
+
+#ifndef BUILD_STATIC
+# if defined(NEUROPLEQUESAUDIOENGINE_LIB)
+#  define NEUROPLEQUESAUDIOENGINE_EXPORT Q_DECL_EXPORT
+# else
+#  define NEUROPLEQUESAUDIOENGINE_EXPORT Q_DECL_IMPORT
+# endif
+#else
+# define NEUROPLEQUESAUDIOENGINE_EXPORT
+#endif
